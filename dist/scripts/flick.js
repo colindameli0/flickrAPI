@@ -15,14 +15,6 @@ flickApp.init = function(test){
 		$('.details').fadeIn('slow');
 		$('.container').empty();								
 		photoName = [];	// resets photoName array when user gerneates new first name
-		// if (userName === "drew") {
-		// 		$('.dM').fadeIn('fast');
-		// 		$('.container').css('display', 'none');
-		// 	} else {
-		// 		$('.dM').css('display', 'none');
-		// 		$('.container').css('display', 'block'); //sloppy code but last minute addition. to be refactored.
-		// 	}
-
 
 		//if we don't pass i into the getARt function the images will be in a random order (when ajax finishes the requests)
 		//i tells us what letter we're on to pass the correct image index
@@ -34,17 +26,8 @@ flickApp.init = function(test){
 			 	// example: the name "COLIN" 
 			 	// 1st i=0, letter = C, user.length = 5
 			 	// 2nd i=1, letter = O, user.length = 5
-		}
-		
+		}		
 	});	
-
-	// $('.new').on('click', function(e){
-	// 	console.log("fuck");	
-	// 	e.preventDefault();
-	// 	var tempid = $(this).attr('id');
-	// 	flickApp.getLetter( name[tempid] , tempid);
-	// });
-
 }
 
 flickApp.getLetter = function(searchData, index){
@@ -104,17 +87,10 @@ flickApp.getArt = function(searchData, index, nameLength) {
 
 				} 
 
-
-				// $('.new').on('click', function() {
-				// 	console.log('suckit');
-				// });
 				$('.new').on('click', function(e){	
 					e.preventDefault();
 					var tempid = $(this).attr('id');
 					$(".harris").fadeIn('slow').delay(10).fadeOut('slow');
-					// console.log(user);
-					// console.log(tempid);
-					// console.log(user[parseInt(tempid)]);
 					flickApp.getLetter( user[parseInt(tempid)] , tempid);
 				});
 				
