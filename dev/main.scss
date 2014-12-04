@@ -290,7 +290,7 @@ span {
 
 
 /* Landscape phones and down */
-@media (max-width: 540px) {
+@media (max-width: 600px) {
 
   .login {
     display: none;
@@ -355,12 +355,17 @@ span {
   .new {
     display: block;
     margin: 0 auto;
+    width: 80% !important;
   }
 
   input[type="text"] {
     font-size: 13px;
   }
 
+  .loading {
+    left: 25%;
+  }
 
 
 }
+
